@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const CreateAccount = () => {
 
@@ -17,10 +18,13 @@ const CreateAccount = () => {
     function submitHandler(e){
         e.preventDefault();
         console.log("formData", formData);
+        setFormData({
+            fullName: "", phNo: "", email: "", password: "", companyName: "", isAgency: ""
+        })
     }
 
     return (
-        <div className=' h-full flex flex-col' >
+        <div className=' h-full flex flex-col p-5' >
             <h2 className='font-medium text-xl'>
                 Create your
             </h2>
@@ -47,7 +51,7 @@ const CreateAccount = () => {
                         >Phone number <sup className=' text-red-600'>*</sup> </label>
                         <input
                             name='phNo'
-                            type='text'
+                            type='number'
                             className=" border w-full rounded-md p-1"
                             value={formData.phNo}
                             onChange={changeHandler}
@@ -59,7 +63,7 @@ const CreateAccount = () => {
                         >Email address <sup className=' text-red-600'>*</sup> </label>
                         <input
                             name='email'
-                            type='text'
+                            type='email'
                             className=" border w-full rounded-md p-1"
                             value={formData.email}
                             onChange={changeHandler}
@@ -115,7 +119,9 @@ const CreateAccount = () => {
                 </div>
                 <div>
                     <button onClick={submitHandler} className='py-2 text-sm bg-violet-600 text-white rounded-md w-full'>
-                        Create Account
+                        <Link to={'/dashboard'}>
+                            Create Account
+                        </Link>
                     </button>
                 </div>
             </div>

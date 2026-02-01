@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div className=' h-[90vh] flex flex-col justify-end'>
+    <div className=' h-[90vh] flex flex-col justify-end p-5'>
         <h3 className=' font-medium py-2 text-2xl'>Welcome to PopX</h3>
         <div className=' mb-4'>
           <p className=' text-sm text-gray-400'>Lorem ipsum dolor sit amet,</p>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
@@ -17,10 +18,13 @@ const Login = () => {
     function submitHandler(e){
         e.preventDefault();
         console.log("formData", formData);
+        setFormData({
+            email: "", password: ""
+        })
     }
 
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col p-5'>
         <div>
             <h2 className='font-medium text-xl'>Signin to your</h2>
             <h2 className='font-medium text-xl'>PopX account</h2>
@@ -30,16 +34,18 @@ const Login = () => {
             <p className=' text-sm text-gray-400'>consectetur adipiscing elit,</p>
         </div>
         <div className='flex flex-col gap-4 mt-6'>
+            
             <div className='relative'>
                 <label
                     className="absolute -top-2 left-2 px-1 bg-white text-[12px] text-purple-500"
                 >Email address <sup className=' text-red-600'>*</sup> </label>
                 <input
                     name='email'
-                    type='text'
+                    type='email'
                     className=" border w-full rounded-md p-1"
                     value={formData.email}
                     onChange={changeHandler}
+                    required
                 />
             </div>
             <div className='relative'>
@@ -52,12 +58,16 @@ const Login = () => {
                     className=" border w-full rounded-md p-1"
                     value={formData.password}
                     onChange={changeHandler}
+                    required
                 />
             </div>
+            
         </div>
         <div>
             <button onClick={submitHandler} className='py-2 text-sm bg-gray-300 font-medium text-white rounded-md w-full mt-4'>
-                Login
+                <Link to={'/dashboard'}>
+                    Login
+                </Link>
             </button>
         </div>
     </div>
