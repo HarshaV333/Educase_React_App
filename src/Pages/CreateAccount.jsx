@@ -31,7 +31,7 @@ const CreateAccount = () => {
                 <div className=' flex flex-col gap-4 mt-5'>
                     <div className='relative'>   
                         <label
-                            className="absolute -top-2 left-2 px-1 bg-white text-[12px] text-gray-600"
+                            className="absolute -top-2 left-2 px-1 bg-white text-[12px] text-purple-500"
                         >Full name <sup className=' text-red-600'>*</sup> </label>
                         <input
                             name='fullName'
@@ -43,7 +43,7 @@ const CreateAccount = () => {
                     </div>
                     <div className='relative'>
                         <label
-                            className="absolute -top-2 left-2 px-1 bg-white text-[12px] text-gray-600"
+                            className="absolute -top-2 left-2 px-1 bg-white text-[12px] text-purple-500"
                         >Phone number <sup className=' text-red-600'>*</sup> </label>
                         <input
                             name='phNo'
@@ -55,7 +55,7 @@ const CreateAccount = () => {
                     </div>
                     <div className='relative'>
                         <label
-                            className="absolute -top-2 left-2 px-1 bg-white text-[12px] text-gray-600"
+                            className="absolute -top-2 left-2 px-1 bg-white text-[12px] text-purple-500"
                         >Email address <sup className=' text-red-600'>*</sup> </label>
                         <input
                             name='email'
@@ -67,7 +67,7 @@ const CreateAccount = () => {
                     </div>
                     <div className='relative'>
                         <label
-                            className="absolute -top-2 left-2 px-1 bg-white text-[12px] text-gray-600"
+                            className="absolute -top-2 left-2 px-1 bg-white text-[12px] text-purple-500"
                         >Password <sup className=' text-red-600'>*</sup> </label>
                         <input
                             name='password'
@@ -79,7 +79,7 @@ const CreateAccount = () => {
                     </div>
                     <div className='relative'>
                         <label
-                            className="absolute -top-2 left-2 px-1 bg-white text-[12px] text-gray-600"
+                            className="absolute -top-2 left-2 px-1 bg-white text-[12px] text-purple-500"
                         >Company name <sup className=' text-red-600'>*</sup> </label>
                         <input
                             name='companyName'
@@ -99,7 +99,7 @@ const CreateAccount = () => {
                                 name='isAgency'
                                 value='Yes'
                                 onChange={changeHandler}
-                                className=' size-4'
+                                className=' size-4 checked:accent-purple-300'                                                                                        
                             />
                             <label className=' px-1 text-xs'>Yes</label>
                             <input
@@ -107,14 +107,14 @@ const CreateAccount = () => {
                                 name='isAgency'
                                 value='No'
                                 onChange={changeHandler}
-                                className=' size-4'
+                                className=' size-4 accent-purple-300'                                                            
                             />
                             <label className=' px-1 text-xs'>No</label>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <button onClick={submitHandler} className='py-2 text-sm bg-blue-600 text-white rounded-md w-full'>
+                    <button onClick={submitHandler} className='py-2 text-sm bg-violet-600 text-white rounded-md w-full'>
                         Create Account
                     </button>
                 </div>

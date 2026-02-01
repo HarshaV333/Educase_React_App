@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
 import CreateAccount from './Pages/CreateAccount'
+import Login from './Pages/Login'
 
 const App = () => {
   // w-[300px] h-[90vh] border font-Rubic flex flex-col justify-end p-5
@@ -13,6 +14,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/createAccount' element={<CreateAccount/>} />
+          <Route path='/login' element={<Login/>} />
         </Routes>
 
       </div>
