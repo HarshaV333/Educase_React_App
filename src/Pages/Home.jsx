@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div>
+    <div className=' h-[90vh] flex flex-col justify-end'>
         <h3 className=' font-medium py-2 text-2xl'>Welcome to PopX</h3>
         <div className=' mb-4'>
           <p className=' text-sm text-gray-400'>Lorem ipsum dolor sit amet,</p>
@@ -11,7 +11,7 @@ const Home = () => {
         </div>
         <Link to={'/createAccount'}>
           <button className=' py-2 text-sm bg-blue-600 text-white rounded-md w-full'>
-              Create Account
+                  Create Account
           </button>
         </Link>
         <Link to={'/login'}>
