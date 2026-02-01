@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
 import CreateAccount from './Pages/CreateAccount'
@@ -7,7 +7,6 @@ import Dashboard from './Pages/Dashboard'
 
 const App = () => {
   
-  const [data, setData] = useState(null)
 
   return (
     <div className=' w-screen h-screen flex items-center justify-center'>
